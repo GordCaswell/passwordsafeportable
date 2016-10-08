@@ -51,7 +51,7 @@ will not work! ***</p>
 
 <body>
 
-<h1 align="center">Password Safe 3.39.1 Release Notes July 2016</h1>
+<h1 align="center">Password Safe 3.40 Release Notes September 2016</h1>
 
 <p>This note describe the new features, fixed bugs and known problems
 with the latest versions of Password Safe. For a short description of
@@ -67,9 +67,152 @@ Information about older versions may be found <a href="https://pwsafe.org/histor
 <br>
 <hr>
 
-<h3><a name="V3.39.1"></a>Version V3.39.1</h3>
+<h3><a name="V3.40"></a>Version V3.40</h3>
 <hr>
+<h4><a name="V3.40BugsFixed"></a>Bugs fixed in V3.40</h4>
+<table>
+<tbody>
+<tr>
+<td align="center" width="100">[]</td>
+<td>Correctly import empty groups from a XML file when an imported group has
+been specified.</td>
+</tr>
+<tr>
+<td align="center" width="100">[]</td>
+<td>Empty groups are now added when merging one PasswordSafe database into another.</td>
+</tr>
+<tr>
+<td align="center" width="100">[]</td>
+<td>List view column widths are no longer reset when dragging columns to different
+positions or columns are added or removed.</td>
+</tr>
+<tr>
+<td align="center" width="100">[]</td>
+<td>The user specified Notes font is now also applied to the Notes column in the
+List view.</td>
+</tr>
+<tr>
+<td align="center" width="100">[]</td>
+<td>Entry Protected state and AutoType string is now correctly displayed in the
+List view.</td>
+</tr>
+<tr>
+<td align="center" width="100">[]</td>
+<td>After entry has been edited from List View, it now remains visible after
+Edit/Undo/Redo even if the change alters its position within the view.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1360);return false;">1360</a></td>
+<td>When an entry/group using a Named Password Policy is exported to a
+PasswordSafe database, the referenced policy is now also exported.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1355);return false;">1355</a></td>
+<td>Fixed tabbing order in Basic AddEdit tab.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1352);return false;">1352</a></td>
+<td>Fixed regression in recent entry processing.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1347);return false;">1347</a></td>
+<td>Prevent a user from trying to copy a filter to a read-only database.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1346);return false;">1346</a></td>
+<td>The Notes window no longer scrolls when re-activated after losing focus.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1345);return false;">1345</a></td>
+<td>Removed the ability to create a new database when read-only is checked.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1343);return false;">1343</a><br>
+<a href="nojs.html" onclick="BR(1342);return false;">1342</a></td>
+<td>Fix multiple empty group issues.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1335);return false;">1335</a></td>
+<td>If "Minimize after Autotype" option is set, it will also be honoured for the
+user action: "Browse to URL + Autotype".</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1315);return false;">1315</a></td>
+<td>Keep selected entry selected after refreshing the view (F5).</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1314);return false;">1314</a></td>
+<td>Selected entries keep highlight when the Find toolbar is opened
+  and even when Password Safe loses focus to another application.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1313);return false;">1313</a><br>
+<a href="nojs.html" onclick="BR(1318);return false;">1318</a></td>
+<td>Find toolbar no longer closes when it shouldn't. In addition,
+results are updated when entries are added/deleted.</td>
+</tr>
+</tbody>
+</table>
+
 <br>
+<hr>
+<h4><a name="V3.40Changes"></a>Changes to Existing Features in V3.40</h4>
+<table>
+<tbody>
+<tr>
+<td align="center" width="100">[]</td>
+<td>Save Immediately has been enhanced to apply to all changes to the database
+and not just after an edit or addition of an entry. It is <b>strongly</b>
+recommended that, if enabled, then the option to "Create intermediate backups"
+is also enabled. Note, changes made via the Compare database results dialog will
+not cause a database save for each action but will after the compare results
+dialog has been closed.</td>
+</tr>
+<tr>
+<td align="center" width="100">[]</td>
+<td>The last sort direction in List View (ascending or descending) on closing
+a database is now stored in the application configuration file and is no longer
+stored in the database header.</td>
+</tr>
+<tr>
+<td align="center" width="100">[]</td>
+<td>The number of groups shown in the database properties dialog is now counted
+in the same manner as directories/folders in a file system, e.g., Windows Explorer.
+This includes empty groups. The number of empty groups is also shown.</td>
+</tr>
+</tbody>
+</table>
+
+<br>
+<hr>
+<h4><a name="V3.40New"></a>New Features for V3.40</h4>
+<table>
+<tbody>
+<tr>
+<td align="center" width="100">[]</td>
+<td>Empty sub-groups are included when exporting a group to a new PasswordSafe
+database.</td>
+</tr>
+<tr>
+<td align="center" width="100">[]</td>
+<td>Adding an empty group will also cause the database to be saved if the user has
+selected the option "Save immediately on Add or Edit".</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="FR(811);return false;">811</a></td>
+<td>The user's selected Notes font is now used for Tooltips in the Tree and List
+views if the Display preference 'Show Notes as Tooltips in Tree &amp; List views' is
+set.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="FR(810);return false;">810</a></td>
+<td>Allow font selection for all the user input fields in the Add/Edit
+entry and the Create Shortcut dialogs.</td>
+</tr>
+</tbody>
+</table>
+
+<h3><a name="V3.39.1"></a>Version V3.39.1</h3>
 <hr>
 <h4><a name="V3.39.1BugsFixed"></a>Bugs fixed in V3.39.1</h4>
 <table>
@@ -80,8 +223,9 @@ Information about older versions may be found <a href="https://pwsafe.org/histor
 </tr>
 </tbody>
 </table>
-<hr>
 
+<br>
+<hr>
 <h3><a name="V3.39"></a>Version V3.39</h3>
 <hr>
 <h4><a name="V3.39New"></a>New Features for V3.39</h4>

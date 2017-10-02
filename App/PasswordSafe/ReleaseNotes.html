@@ -57,7 +57,7 @@ open('https://github.com/pwsafe/pwsafe/issues/'+ ID +'/',
 
 <body>
 
-<h1 align="center">Password Safe 3.41.0 Release Notes November 2016</h1>
+<h1 align="center">Password Safe 3.42.1 Release April 2017</h1>
 
 <p>This note describes the new features, fixed bugs and known problems
 with the latest versions of Password Safe. For a short description of
@@ -78,6 +78,149 @@ Information about older versions may be found <a href="https://pwsafe.org/histor
 <br>
 <hr>
 
+<h4><a name="V3.42.1BugsFixed"></a>Bugs fixed in V3.42.1</h4>
+<table>
+<tbody>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1404);return false;">1404</a></td>
+<td>Regression: In read-only mode, Entry popup menu's View Entry item restored (was mistakenly disabled).</td>
+<tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1266);return false;">1266</a></td>
+<td>Regression: Toolbar elements display correctly on high-resolution monitors
+under Windows 8.1 and later now supported in 64-bit builds.</td>
+</tr>
+</tbody>
+</table>
+
+<h3><a name="V3.42.0"></a>Version V3.42.0</h3>
+<hr>
+
+<h4><a name="V3.42.0BugsFixed"></a>Bugs fixed in V3.42.0</h4>
+<table>
+<tbody>
+<tr>
+<td align="center" width="100">[]</td>
+<td>Fix issue when locking database when not using the System Tray.</td>
+</tr>
+<tr>
+<td align="center" width="100">[]</td>
+<td>Fix empty group validation on DB open.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="GH(288);return false;">G288</a></td>
+<td>Changes to default password policy now persistent under V4 databases.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1395);return false;">1395</a></td>
+<td>PasswordSafe now correctly duplicates a group containing both a base entry and
+its dependent i.e. shortcut or alias.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1393);return false;">1393</a></td>
+<td>Correctly handle opening a locked database, which is open in R/W by another user.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1392);return false;">1392</a></td>
+<td>If the command line parameter '-g' is used to specify a configuration
+file by its relative path, PasswordSafe will now look for it in the same
+directory as the executable unless overridden by the PWS_PREFSDIR environment
+variable.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1391);return false;">1391</a></td>
+<td>Fixed slow opening of a database if the default group display is completely
+collapsed.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1385);return false;">1385</a></td>
+<td>The filter active indicator now shows in Windows 7.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1384);return false;">1384</a></td>
+<td>Toolbar images and text are now back in sync.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1367);return false;">1367</a></td>
+<td>Fixed regression in command line arguments -h and -u support.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1358);return false;">1358</a></td>
+<td>When PaswordSafe automatically locks to the TaskBar, the unlock window now gets
+input focus when clicking on the icon to unlock the database.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1346);return false;">1346</a></td>
+<td>The Notes window scroll position in Add/Edit no longer jumps to last selected
+line when it is reshown after being hidden.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="BR(1275);return false;">1275</a></td>
+<td>The scroll positions of the Tree and List views are now saved on minimize and
+used to set the window position when it is restored.</td>
+</tr>
+</tbody>
+</table>
+
+<br>
+<hr>
+<h4><a name="V3.42.0Changes"></a>Changes to Existing Features in V3.42.0</h4>
+<table>
+<tbody>
+<tr>
+<td align="center" width="100">[]</td>
+<td>Previous commands, e.g. edit or delete an entry, are no longer cleared when the database
+is locked to enable their undo after the database has been unlocked.</td>
+</tr>
+<tr>
+<td align="center" width="100">[]</td>
+<td>User selected font sizes are now saved in points in the configuration file so that the
+same size of font is used across different user systems if sharing the configuration file. This
+helps where the different systems have different resolutions.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="FR(819);return false;">819</a></td>
+<td>A duplicated entry's creation time is set to the time of duplication.
+All other times are copied from the original.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="FR(816);return false;">816</a></td>
+<td>Set installed version in uninstall section of Registry for Windows version.</td>
+</tr>
+</tbody>
+</table>
+
+<br>
+<hr>
+<h4><a name="V3.42.0New"></a>New Features for V3.42.0</h4>
+<table>
+<tbody>
+<tr>
+<td align="center" width="100">[]</td>
+<td>A new internal filter has been implemented to show only those entries from
+last Find. Access via the View menu or Ctrl+K shortcut.</td>
+</tr>
+<tr>
+<td align="center" width="100">[]</td>
+<td>PasswordSafe now supports the "long press" as the equivalent of a right mouse click
+on Windows systems with touch screens running Windows 7 and later.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="FR(822);return false;">822</a></td>
+<td>An open database can now be locked via the File menu or a Toolbar button
+irrespective of whether the System Tray is used or not.</td>
+</tr>
+<tr>
+<td align="center" width="100"><a href="nojs.html" onclick="FR(821);return false;">821</a></td>
+<td>A new symbol for protected entries (locked padlock - Unicode U+01F512)
+has been implemented but, if the currently selected Tree/List font does not support
+it and the user is not running Windows 10, then the old symbol ('#') will be used.</td>
+</tr>
+</tbody>
+</table>
+
+<br>
+<hr>
 <h3><a name="V3.41.0"></a>Version V3.41.0</h3>
 <hr>
 <h4><a name="V3.41.0BugsFixed"></a>Bugs fixed in V3.41.0</h4>
@@ -129,10 +272,6 @@ when exiting Options.</td>
 <tr>
 <td align="center" width="100"><a href="nojs.html" onclick="BR(1368);return false;">1368</a></td>
 <td>The Status bar now shows the correct number of entries when a database is unlocked.</td>
-</tr>
-<tr>
-<td align="center" width="100"><a href="nojs.html" onclick="BR(1367);return false;">1367</a></td>
-<td> Fixed regression in command line arguments -h and -u support.</td>
 </tr>
 <tr>
 <td align="center" width="100"><a href="nojs.html" onclick="BR(1366);return false;">1366</a></td>
@@ -210,7 +349,7 @@ values, are now included in the display when the filter is active.</td>
 </tr>
 <tr>
 <td align="center" width="100"><a href="nojs.html" onclick="FR(815);return false;">815</a></td>
-<td>The database backup location now supports environmental variables e.g. 
+<td>The database backup location now supports environment variables e.g. 
 %homedrive% and %homepath%.  If used, the resulting path is shown.</td>
 </tr>
 <tr>
@@ -571,7 +710,7 @@ is moved to it via editing.</td>
 <tr>
 <td align="center" width="100"><a href="nojs.html" onclick="BR(1266);return false;">1266</a></td>
 <td>Toolbar elements display correctly on high-resolution monitors
-  under Windows 8.1 and later.</td>
+under Windows 8.1 and later.</td>
 </tr>
 </tbody>
 </table>
